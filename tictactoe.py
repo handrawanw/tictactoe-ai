@@ -1,10 +1,12 @@
 from string import Template
 from random import randint
 
+# Knowlege AI
 pattern=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
 map_board=[[0,1,2],[3,4,5],[6,7,8]]
 number_board=[['N', 'N', 'N'], ['N', 'N', 'N'], ['N', 'N', 'N']]
 string_board = """(0?0),(0?1),(0?2):(1?3),(1?4),(1?5):(2?6),(2?7),(2?8)""" 
+# Knowlege AI
 
 def reset_value():
 	return [['N', 'N', 'N'], ['N', 'N', 'N'], ['N', 'N', 'N']];
@@ -23,6 +25,7 @@ def wins(symbol):
 	return None
      
 
+# Process AI
 def defeat_human():
 	symbol="O"
 	human_xy=None
@@ -62,7 +65,7 @@ def detect_human():
 	#end for
 	return None
 	
-
+# Process AI
 	
 def positionEmpty():
     for i in range(3):
