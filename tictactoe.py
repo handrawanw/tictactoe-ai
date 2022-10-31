@@ -42,7 +42,6 @@ def defeat_human():
 		if count == 2:
 			if number_board[int(human_xy['y'])][int(human_xy['x'])] != "X":
 				number_board[int(human_xy['y'])][int(human_xy['x'])]="X"
-				return True
 		count=0
 		human_xy=None
 	#end for
