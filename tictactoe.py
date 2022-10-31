@@ -93,13 +93,16 @@ def make_board():
 make_board()
 
 def human_player(val):
-    posXY=positionY(val);
+    posXY=positionY(val)
     if posXY == None:
         print("Invalid position")
     else:    
         if number_board[int(posXY['y'])][int(posXY['x'])] == "N":
             number_board[int(posXY['y'])][int(posXY['x'])]="O"
-
+        else:
+            make_board()
+            human_player(int(input("Input telah ada\nMasukan position baru tictactoe(0:8)\n")))
+            
         
 def computer_player():
 	detect_human_error=detect_human()
@@ -123,15 +126,22 @@ while True:
     else:
         human_player(cordinateXY);
         human_win=wins("O")
-        if human_win is True:
-        	print("Human Win")
         # defeat_human()
         computer_player()
         computer_win=wins("X")
-        if computer_win is True:
-        	print("Computer Win"); 
         make_board()
         posEmp=positionEmpty()
         if human_win is True or computer_win is True or posEmp is None:
-        	break
+            break
+        if human_win is True:
+        	print("Human Win");
+        if computer_win is True:
+            print("Computer Win");
+    #end else
+#end def
 
+        
+    
+    
+         
+        
